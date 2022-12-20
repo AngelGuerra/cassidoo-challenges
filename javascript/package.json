@@ -1,0 +1,15 @@
+{
+  "name": "cassidoo-challenges",
+  "version": "1.0.0",
+  "description": "Collection of challenges sent by Cassidoo in her newsletter Rendezvous with Cassidoo ",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vitest": "^0.25.8"
+  }
+}
