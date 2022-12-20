@@ -1,6 +1,7 @@
 import { expect, describe, it } from "vitest";
 import { capitalAfterVowelWithoutRegex, capitalAfterVowelWithRegex } from ".";
 
+// Talk is cheap, show me the code
 describe.concurrent("Check conversions", () => {
   it("test with regex example 01", async () => {
     expect(capitalAfterVowelWithRegex("hello world")).toBe("heLlo WoRld");

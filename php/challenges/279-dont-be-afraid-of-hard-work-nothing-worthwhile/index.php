@@ -16,7 +16,7 @@ class AfterVowelCapitalizer
     {
     }
 
-    public function withRegex(): string
+    public function withRegex(): ?string
     {
         return preg_replace_callback(
             "/(?<=[aeiou])(!?\s?)([^aeiou]{1})/i",
