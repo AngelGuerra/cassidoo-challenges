@@ -6,8 +6,6 @@ use function CassidooChallenges\generateRoman;
 
 include_once __DIR__ . "/../challenges/001-sometimes-i-get-emotional-over-fonts-kanye-west/index.php";
 
-// use CassidooChallenges\AfterVowelCapitalizer;
-
 it('when convert 3,999 to roman must be MMMCMXCIX', function () {
     $this->assertEquals(generateRoman(3999), 'MMMCMXCIX');
 });

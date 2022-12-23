@@ -5,6 +5,6 @@ source 'https://rubygems.org'
 group :development do
   gem 'minitest', '~> 5.8', '>= 5.8.4'
   gem 'rake', '~> 13.0', '>= 13.0.6'
-  gem 'rubocop', '~> 1.40'
+  gem 'rubocop', '~> 1.41'
   gem 'solargraph', '~> 0.48.0'
 end

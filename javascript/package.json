@@ -10,6 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.9.4",
-    "vitest": "^0.25.8"
+    "vitest": "^0.26.2"
   }
 }

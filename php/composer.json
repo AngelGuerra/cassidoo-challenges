@@ -25,8 +25,8 @@
     }
   ],
   "scripts": {
-    "cs-check": "phpcs --colors -p --standard=PSR12 challenges/",
-    "cs-fix": "phpcbf --colors -p --standard=PSR12 challenges/",
+    "cs-check": "phpcs --colors -p --standard=PSR12 challenges/ tests/",
+    "cs-fix": "phpcbf --colors -p --standard=PSR12 challenges/ tests/",
     "stan": "phpstan analyse -l 9 challenges/",
     "test": [
       "Composer\\Config::disableProcessTimeout",
