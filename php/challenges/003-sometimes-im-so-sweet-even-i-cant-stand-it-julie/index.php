@@ -1,5 +1,7 @@
 <?php
 
+namespace CassidooChallenges;
+
 function cleanStringAndCastToArray(string $str): string
 {
     return (string)preg_replace('/[^a-z]/', '', mb_strtolower($str));

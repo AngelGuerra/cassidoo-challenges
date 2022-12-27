@@ -2,6 +2,8 @@
 
 namespace CassidooChallenges\Test;
 
+use function CassidooChallenges\areAnagrams;
+
 include_once __DIR__ . "/../challenges/003-sometimes-im-so-sweet-even-i-cant-stand-it-julie/index.php";
 
 it("test 'O, Draconian devil!' and 'Leonardo Da Vinci' must be true", function () {
