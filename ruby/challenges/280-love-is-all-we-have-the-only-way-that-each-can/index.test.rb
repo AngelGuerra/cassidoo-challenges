@@ -21,25 +21,25 @@ end
 describe 'ReplaceZerosTestSuite' do
   describe 'test example "1234500362000440"' do
     it 'must be 1234523623441' do
-      assert replace_zeros('1234500362000440'), '1234523623441'
+      assert replace_zeros('1234500362000440'), 1234523623441
     end
   end
 
   describe 'test example "123450036200044"' do
     it 'must be 123452362344' do
-      assert replace_zeros('123450036200044'), '123452362344'
+      assert replace_zeros('123450036200044'), 123452362344
     end
   end
 
   describe 'test example "000000000000"' do
     it 'must be 12' do
-      assert replace_zeros('000000000000'), '12'
+      assert replace_zeros('000000000000'), 12
     end
   end
 
   describe 'test example "123456789"' do
     it 'must be 123456789' do
-      assert replace_zeros('123456789'), '123456789'
+      assert replace_zeros('123456789'), 123456789
     end
   end
 end

@@ -17,17 +17,17 @@ it("throws exception when input doesn't contain only numbers", function () {
 })->throws(Exception::class);
 
 it('test example "1234500362000440"', function () {
-    $this->assertEquals(replaceZeros("1234500362000440"), '1234523623441');
+    $this->assertEquals(replaceZeros("1234500362000440"), 1234523623441);
 });
 
 it('test example "123450036200044"', function () {
-    $this->assertEquals(replaceZeros("123450036200044"), '123452362344');
+    $this->assertEquals(replaceZeros("123450036200044"), 123452362344);
 });
 
 it('test example "000000000000"', function () {
-    $this->assertEquals(replaceZeros("000000000000"), '12');
+    $this->assertEquals(replaceZeros("000000000000"), 12);
 });
 
 it('test example "123456789"', function () {
-    $this->assertEquals(replaceZeros("123456789"), '123456789');
+    $this->assertEquals(replaceZeros("123456789"), 123456789);
 });

@@ -5,5 +5,5 @@
 def replace_zeros(str)
   raise 'Input must contain only digits.' unless /^\d+$/.match?(str)
 
-  str.gsub(/0+/, &:length)
+  str.gsub(/0+/, &:length).to_i
 end

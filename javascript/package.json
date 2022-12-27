@@ -4,11 +4,13 @@
   "description": "Collection of challenges sent by Cassidoo in her newsletter Rendezvous with Cassidoo ",
   "scripts": {
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "format": "prettier --write challenges/**/*.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^2.8.1",
     "typescript": "^4.9.4",
     "vitest": "^0.26.2"
   }
