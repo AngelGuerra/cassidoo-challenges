@@ -1,10 +1,9 @@
 # Javascript
-
 javascript/node_modules
 
 # PHP
-
 php/.phpunit.result.cache
 php/vendor
 
 # Ruby
+ruby/.rspec_status

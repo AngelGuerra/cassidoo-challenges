@@ -1,7 +1,15 @@
 # frozen_string_literal: true
 
-# See ./README.md
+# Given a string, make every consonant after a vowel uppercase. Can you do this with and without regex?
+#
+# Example
+# ```js
+# capitalAfterVowel("hello world"); // "heLlo WoRld"
+# capitalAfterVowel("xaabeuekadii"); // "xaaBeueKaDii"
+# ```
 class AfterVowelCapitalizer
+  attr_reader :str
+
   def initialize(str)
     @str = str
   end
@@ -13,18 +21,10 @@ class AfterVowelCapitalizer
   def without_regex
     uppercase_it = false
 
-    @str.split('').map do |c|
-      next ' ' if c.strip.empty?
+    @str.chars.map do |c|
+      (char, uppercase_it) = convert(c, uppercase_it)
 
-      if vowel? c
-        uppercase_it = true
-        next c
-      end
-
-      next c unless uppercase_it
-
-      uppercase_it = false
-      next c.upcase
+      char
     end.join
   end
 
@@ -32,5 +32,13 @@ class AfterVowelCapitalizer
 
   def vowel?(char)
     %w[a e i o u].include? char
+  end
+
+  def convert(char, uppercase_it)
+    return [" ", uppercase_it] if char.strip.empty?
+    return [char, true] if vowel? char
+    return [char, uppercase_it] unless uppercase_it
+
+    [char.upcase, false]
   end
 end

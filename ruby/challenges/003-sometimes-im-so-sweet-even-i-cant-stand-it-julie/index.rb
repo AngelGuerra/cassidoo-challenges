@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
-# See ./README.md
+# Write a function that takes in two strings and returns true if they are anagrams.
+module Anagrams
+  def self.run(str_a, str_b)
+    str_a_as_array = clean_string_and_cast_to_array(str_a)
+    str_b_as_array = clean_string_and_cast_to_array(str_b)
 
-def clean_string_and_cast_to_array(str)
-  str.downcase.gsub(/[^a-z]/, '').split('').sort.join
-end
+    str_a_as_array == str_b_as_array
+  end
 
-def are_anagrams(str_a, str_b)
-  str_a_as_array = clean_string_and_cast_to_array(str_a)
-  str_b_as_array = clean_string_and_cast_to_array(str_b)
-
-  str_a_as_array == str_b_as_array
+  def self.clean_string_and_cast_to_array(str)
+    str.downcase.gsub(/[^a-z]/, "").chars.sort.join
+  end
 end
