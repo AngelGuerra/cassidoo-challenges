@@ -2,6 +2,8 @@
 
 namespace CassidooChallenges;
 
+# Write a function that takes in two strings and returns true if they are anagrams.
+
 function cleanStringAndCastToArray(string $str): string
 {
     return (string)preg_replace('/[^a-z]/', '', mb_strtolower($str));

@@ -3,15 +3,21 @@
 namespace CassidooChallenges;
 
 /**
- * @see ./README.md
+ * Given a string, make every consonant after a vowel uppercase. Can you do this with and without regex?
+ *
+ * @example -
+ * ```js
+ * capitalAfterVowel("hello world"); // "heLlo WoRld"
+ * capitalAfterVowel("xaabeuekadii"); // "xaaBeueKaDii"
+ * ```
  */
 class AfterVowelCapitalizer
 {
-  /**
-   * Constructor.
-   *
-   * @param string $str String to transform.
-   */
+    /**
+     * Constructor.
+     *
+     * @param string $str String to transform.
+     */
     public function __construct(private string $str)
     {
     }

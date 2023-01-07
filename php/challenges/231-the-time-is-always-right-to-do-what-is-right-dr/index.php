@@ -4,6 +4,17 @@ namespace CassidooChallenges;
 
 use Exception;
 
+/**
+ * Using the rules of [Wordle](https://www.powerlanguage.co.uk/wordle/), given a guessWord and a solutionWord, return
+ * a set of emojis returned from the guessWord.
+ *
+ * @example -
+ * ```js
+ * let solutionWord = "fudge";
+ * wordleGuess("reads", solutionWord); // "⬛🟨⬛🟨⬛"
+ * wordleGuess("lodge", solutionWord); // "⬛⬛🟩🟩🟩"
+ * ```
+ */
 class Wordle
 {
     public function __construct(private string $solution)
