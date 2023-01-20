@@ -7,3 +7,4 @@ php/vendor
 
 # Ruby
 ruby/.rspec_status
+ruby/coverage

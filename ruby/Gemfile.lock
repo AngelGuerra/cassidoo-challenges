@@ -2,7 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    climate_control (1.2.0)
     diff-lcs (1.5.0)
+    docile (1.4.0)
     json (2.6.3)
     parallel (1.22.1)
     parser (3.2.0.0)
@@ -36,16 +38,30 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.24.1)
       parser (>= 3.1.1.0)
+    rubocop-capybara (2.17.0)
+      rubocop (~> 1.41)
+    rubocop-rspec (2.18.1)
+      rubocop (~> 1.33)
+      rubocop-capybara (~> 2.17)
     ruby-progressbar (1.11.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     unicode-display_width (2.4.2)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  climate_control (~> 1.2)
   rake (~> 13.0, >= 13.0.6)
   rspec (~> 3.12)
   rubocop (~> 1.42)
+  rubocop-rspec (~> 2.18, >= 2.18.1)
+  simplecov (~> 0.22.0)
 
 BUNDLED WITH
    2.3.26
