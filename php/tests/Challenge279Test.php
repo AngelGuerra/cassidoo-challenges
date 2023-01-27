@@ -8,20 +8,20 @@ use CassidooChallenges\AfterVowelCapitalizer;
 
 it('test with regex example "hello world"', function () {
     $capitalizer = new AfterVowelCapitalizer("hello world");
-    $this->assertEquals($capitalizer->withRegex(), 'heLlo WoRld');
+    $this->assertEquals('heLlo WoRld', $capitalizer->withRegex());
 });
 
 it('test with regex example "xaabeuekadii"', function () {
     $capitalizer = new AfterVowelCapitalizer("xaabeuekadii");
-    $this->assertEquals($capitalizer->withRegex(), 'xaaBeueKaDii');
+    $this->assertEquals('xaaBeueKaDii', $capitalizer->withRegex());
 });
 
 it('test without regex example "hello world"', function () {
     $capitalizer = new AfterVowelCapitalizer("hello world");
-    $this->assertEquals($capitalizer->withoutRegex(), 'heLlo WoRld');
+    $this->assertEquals('heLlo WoRld', $capitalizer->withoutRegex());
 });
 
 it('test without regex example "xaabeuekadii"', function () {
     $capitalizer = new AfterVowelCapitalizer("xaabeuekadii");
-    $this->assertEquals($capitalizer->withoutRegex(), 'xaaBeueKaDii');
+    $this->assertEquals('xaaBeueKaDii', $capitalizer->withoutRegex());
 });

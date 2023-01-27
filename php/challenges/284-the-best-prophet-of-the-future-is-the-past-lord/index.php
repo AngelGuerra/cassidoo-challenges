@@ -36,6 +36,14 @@ function missingBits(array $bits, int $gap = 2): string
     return "[{$result}]";
 }
 
+/**
+ * Reducer.
+ *
+ * @param mixed[] $acc Accumulator.
+ * @param int $current Current value.
+ * @param int $gap Difference between numbers to fill the gap.
+ * @return mixed[]
+ */
 function reducer(array $acc, int $current, int $gap): array
 {
     if (count($acc) === 0) {
