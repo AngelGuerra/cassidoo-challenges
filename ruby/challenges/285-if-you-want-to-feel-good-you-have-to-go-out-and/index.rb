@@ -11,8 +11,8 @@
 # ```
 module GenerateArrays
   def self.run(length)
-    raise "Length must be a positive number." unless length.positive?
+    raise 'Length must be a positive number.' unless length.positive?
 
-    length.times.map { |idx| (1..(idx + 1)).to_a }
+    Array.new(length) { |idx| (1..(idx + 1)).to_a }
   end
 end

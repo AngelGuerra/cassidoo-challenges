@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "rake", "~> 13.0", ">= 13.0.6"
+gem 'rake', '~> 13.0', '>= 13.0.6'
 
 group :development do
-  gem "climate_control", "~> 1.2"
-  gem "rspec", "~> 3.12"
-  gem "rubocop", "~> 1.42"
-  gem "rubocop-rspec", "~> 2.18", ">= 2.18.1"
-  gem "simplecov", "~> 0.22.0"
+  gem 'climate_control', '~> 1.2'
+  gem 'rspec', '~> 3.12'
+  gem 'rubocop', '~> 1.45', '>= 1.45.1'
+  gem 'rubocop-performance', '~> 1.16'
+  gem 'rubocop-rspec', '~> 2.18', '>= 2.18.1'
+  gem 'simplecov', '~> 0.22.0'
+  gem 'solargraph', '~> 0.48.0'
 end

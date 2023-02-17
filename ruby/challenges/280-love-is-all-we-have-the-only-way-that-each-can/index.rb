@@ -12,7 +12,7 @@
 # ```
 module ReplaceZeros
   def self.run(str)
-    raise "Input must contain only digits." unless /^\d+$/.match?(str)
+    raise 'Input must contain only digits.' unless /^\d+$/.match?(str)
 
     str.gsub(/0+/, &:length).to_i
   end

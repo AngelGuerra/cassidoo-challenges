@@ -35,7 +35,7 @@ class AfterVowelCapitalizer
   end
 
   def convert(char, uppercase_it)
-    return [" ", uppercase_it] if char.strip.empty?
+    return [' ', uppercase_it] if char.strip.empty?
     return [char, true] if vowel? char
     return [char, uppercase_it] unless uppercase_it
 

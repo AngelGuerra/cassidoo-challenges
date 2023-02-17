@@ -10,9 +10,11 @@ Haven't you subscribed yet? -> https://cassidoo.co/newsletter/
 
 **Any suggestion, doubt or change is more than welcome.**
 
+**As version manager I use [asdf](https://asdf-vm.com/).**
+
 ### Typescript
 
-The JavaScript part is done with TypeScript, it is the main directory as it contains the READMEs with the challenges as well as the solution to them. For the tests [vitest](https://vitest.dev/) is used.
+It's the main directory as it contains the READMEs with the challenges as well as the solution to them. For the tests [vitest](https://vitest.dev/) is used.
 
 To run the tests:
 
@@ -28,7 +30,7 @@ To run the tests:
 
 ### Ruby
 
-For Ruby development it is recommended to have [RVM](https://rvm.io/) installed. [Rubocop](https://github.com/rubocop/rubocop) is also used for code quality assurance and [RSpec](http://rspec.info/) as a testing library.
+[Rubocop](https://github.com/rubocop/rubocop) is used for code quality assurance and [RSpec](http://rspec.info/) as a testing library.
 
 To run the tests:
 

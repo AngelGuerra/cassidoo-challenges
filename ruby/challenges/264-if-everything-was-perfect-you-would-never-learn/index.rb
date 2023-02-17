@@ -12,7 +12,7 @@
 # ```
 module FromToGenerator
   def self.from_to(from, to)
-    raise "From cannot be greather than to." if from > to
+    raise 'From cannot be greather than to.' if from > to
 
     enumerator = (from..to).to_enum(:each)
 

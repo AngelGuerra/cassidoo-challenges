@@ -22,7 +22,7 @@ class RectangleSum
     @haystack = haystack
     @size = Math.sqrt(@haystack.length)
 
-    raise "The array must have length in order to become a square." unless (@size % 1).zero?
+    raise 'The array must have length in order to become a square.' unless (@size % 1).zero?
   end
 
   def run(rectangle)
@@ -40,16 +40,16 @@ class RectangleSum
   private
 
   def validate_input_rectangle(rectangle)
-    raise "A rectangle has only 4 corners." if rectangle.length != 4
-    raise "All corners must be inside the reference array." unless rectangle.all? { |item| @haystack.include?(item) }
+    raise 'A rectangle has only 4 corners.' if rectangle.length != 4
+    raise 'All corners must be inside the reference array.' unless rectangle.all? { |item| @haystack.include?(item) }
   end
 
   def validate_possible_corners(possible_corners)
-    raise "Not enough coordinates have been found to create the rectangle." if possible_corners.length < 2
+    raise 'Not enough coordinates have been found to create the rectangle.' if possible_corners.length < 2
   end
 
   def validate_existence_of_rectangle(rectangle)
-    raise "No rectangle has been found with the given coordinates." if rectangle.empty?
+    raise 'No rectangle has been found with the given coordinates.' if rectangle.empty?
   end
 
   def index_1d_to_2d(index)

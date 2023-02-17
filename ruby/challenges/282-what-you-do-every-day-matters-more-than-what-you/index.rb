@@ -12,9 +12,8 @@ module SumEveryOther
   def self.run(number)
     number
       .to_s
-      .gsub(/\D/, "")
+      .gsub(/\D/, '')
       .scan(/\d(\d)/)
-      .map { |match| match.first.to_i }
-      .inject(0, :+)
+      .sum { |match| match.first.to_i }
   end
 end

@@ -31,11 +31,11 @@ class Game
     @player = player
     @amount = bet.nil? ? player.bet(player.amount) : bet
 
-    raise "You cannot play because you have no points." if @amount.zero?
+    raise 'You cannot play because you have no points.' if @amount.zero?
   end
 
   def spin
-    raise "You can no longer play because you have no points." if @amount.zero?
+    raise 'You can no longer play because you have no points.' if @amount.zero?
 
     @amount *= multiplier
   end
@@ -48,7 +48,7 @@ class Game
   private
 
   def multiplier
-    return MULTIPLIERS[ENV["STUB_KEY"].to_sym] if ENV["STUB_KEY"]
+    return MULTIPLIERS[ENV['STUB_KEY'].to_sym] if ENV['STUB_KEY']
 
     MULTIPLIERS[MULTIPLIERS.keys.sample]
   end

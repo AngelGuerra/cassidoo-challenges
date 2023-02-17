@@ -11,21 +11,25 @@
 # missingBits([1, 3, 20, 27]); // "[1,2,3,...,20,...,27]"
 # ```
 module MissingBits
-  RANGE_FILL = "..."
+  RANGE_FILL = '...'
 
-  def self.run(bits, gap = 2)
-    result = bits.sort.inject([]) { |acc, current| reducer(acc, current, gap) }
+  class << self
+    def run(bits, gap = 2)
+      result = bits.sort.inject([]) { |acc, current| reducer(acc, current, gap) }
 
-    "[#{result.join(", ")}]"
-  end
+      "[#{result.join(', ')}]"
+    end
 
-  def self.reducer(acc, current, gap)
-    prev = acc.last
+    private
 
-    return [*acc, current] if prev.nil? || current - prev == 1
+    def reducer(acc, current, gap)
+      prev = acc.last
 
-    return [*acc, RANGE_FILL, current] if current - prev > gap
+      return [*acc, current] if prev.nil? || current - prev == 1
 
-    acc + gap.times.reverse_each.map { |idx| current - idx }
+      return [*acc, RANGE_FILL, current] if current - prev > gap
+
+      acc + gap.times.reverse_each.map { |idx| current - idx }
+    end
   end
 end

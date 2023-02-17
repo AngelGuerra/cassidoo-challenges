@@ -1,17 +1,42 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
 AllCops:
   TargetRubyVersion: 3.2
+  DisplayCopNames: true
   NewCops: enable
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+# ###### #
+# Layout #
+# ###### #
 
 Layout/LineLength:
   Max: 120
 
+# ####### #
+# Metrics #
+# ####### #
+
 Metrics/BlockLength:
   AllowedMethods: ["describe"]
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+# ##### #
+# RSpec #
+# ##### #
+
+RSpec/ExampleLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - unless
+    - for
+    - as

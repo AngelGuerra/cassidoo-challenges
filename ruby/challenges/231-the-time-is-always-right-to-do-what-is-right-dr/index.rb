@@ -13,23 +13,23 @@ class Wordle
   attr_reader :solution, :cleaned_solution
 
   def initialize(solution)
-    raise StandardError("Solution must be a valid 5-letter word.") if solution.length != 5
+    raise StandardError('Solution must be a valid 5-letter word.') if solution.length != 5
 
     @solution = solution
     @cleaned_solution = @solution.dup
   end
 
   def guess(input)
-    raise StandardError("Input must be a valid 5-letter word.") if input.length != 5
+    raise StandardError('Input must be a valid 5-letter word.') if input.length != 5
 
-    return "🟩🟩🟩🟩🟩" if @solution == input
+    return '🟩🟩🟩🟩🟩' if @solution == input
 
     find_coincidences(input.chars).map do |char|
-      next "🟩" if char == "🟩"
+      next '🟩' if char == '🟩'
 
-      @cleaned_solution[@cleaned_solution.index(char)] = " " and next "🟨" if @cleaned_solution.include?(char)
+      @cleaned_solution[@cleaned_solution.index(char)] = ' ' and next '🟨' if @cleaned_solution.include?(char)
 
-      "⬛"
+      '⬛'
     end.join
   end
 
@@ -38,9 +38,9 @@ class Wordle
   def find_coincidences(chars)
     chars.map.with_index do |char, idx|
       if @cleaned_solution[idx] == char
-        @cleaned_solution[idx] = " "
+        @cleaned_solution[idx] = ' '
 
-        next "🟩"
+        next '🟩'
       end
 
       char

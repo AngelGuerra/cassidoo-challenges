@@ -11,7 +11,7 @@
 # ```
 module MaxSubarray
   def self.run(arr, length)
-    raise "The given length exceeds the length of the array" if length > arr.length
+    raise 'The given length exceeds the length of the array' if length > arr.length
 
     cons = arr.each_cons(length).to_a
     sums = cons.collect(&:sum)
