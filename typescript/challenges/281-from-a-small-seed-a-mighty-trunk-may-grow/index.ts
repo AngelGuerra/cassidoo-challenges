@@ -18,7 +18,7 @@ export const maxSubarray = (arr: number[], length: number) => {
   /* [Result, sum] */
   let result: [number[], number] = [[], Number.MIN_VALUE];
 
-  for (let block of eachCons(arr, length)) {
+  for (const block of eachCons(arr, length)) {
     const packSum = block.reduce((sum, current) => sum + current, 0);
 
     if (packSum <= result[1]) {

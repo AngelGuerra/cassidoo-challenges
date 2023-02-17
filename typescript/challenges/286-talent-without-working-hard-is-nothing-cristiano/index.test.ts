@@ -10,7 +10,7 @@ describe.concurrent("Check results", () => {
   });
 
   it("test with columna A must be 1", async () => {
-    expect(getColumnNumber("A")).toBe(1)
+    expect(getColumnNumber("A")).toBe(1);
   });
 
   it("test with column B must be 2", async () => {

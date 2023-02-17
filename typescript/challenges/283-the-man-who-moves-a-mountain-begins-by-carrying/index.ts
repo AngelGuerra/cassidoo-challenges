@@ -8,7 +8,7 @@ export class Player {
   private _name: string;
   private _amount: number;
 
-  constructor(name: string, amount: number = 1000) {
+  constructor(name: string, amount = 1000) {
     this._name = name;
     this._amount = amount;
   }
@@ -79,7 +79,7 @@ export class Game {
   }
 
   /**
-   * 
+   *
    * @returns Returns the multiplier, or in other words, the result of the wheel spin.
    */
   private _multiplier(): number {

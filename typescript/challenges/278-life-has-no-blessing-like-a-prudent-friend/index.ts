@@ -26,7 +26,7 @@ type TRectangle = IPoint[];
  * // ]
  * ```
  */
-const getSideSize = (arr: Number[]): number => {
+const getSideSize = (arr: number[]): number => {
   const size = Math.sqrt(arr.length);
   if (!Number.isInteger(size)) {
     throw new Error("The array must have length in order to become a square.");

@@ -1,7 +1,7 @@
-const ALPHABET_LENGTH: number = 26;
-const CHAR_CODE_DIFF: number = 64;
+const ALPHABET_LENGTH = 26;
+const CHAR_CODE_DIFF = 64;
 
-const getCharValue = (char: string, loop: number = 0): number => {
+const getCharValue = (char: string, loop = 0): number => {
   return (char.charCodeAt(0) - CHAR_CODE_DIFF) * ALPHABET_LENGTH ** loop;
 };
 

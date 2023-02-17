@@ -20,7 +20,7 @@ export const printNumbersWithHex = (): number[] => {
 
 export const printNumbersWithDoWhile = () => {
   const array: number[] = [0];
-  let loop: number = 0;
+  let loop = 0;
 
   do {
     array.push(++loop);

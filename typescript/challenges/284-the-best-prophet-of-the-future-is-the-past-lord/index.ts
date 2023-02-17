@@ -1,4 +1,4 @@
-const RANGE_FILL: string = "...";
+const RANGE_FILL = "...";
 
 type TResult = (typeof RANGE_FILL | number)[];
 
@@ -27,7 +27,7 @@ const reducer = (acc: TResult, current: number, gap: number): TResult => {
   return [...acc, ...fill, current];
 };
 
-export const missingBits = (bits: number[], gap: number = 2): string => {
+export const missingBits = (bits: number[], gap = 2): string => {
   const sortedBits: number[] = Array.from(
     new Int32Array([...new Set(bits)]).sort()
   );

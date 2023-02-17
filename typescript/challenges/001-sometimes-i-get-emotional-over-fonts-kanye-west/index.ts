@@ -16,7 +16,7 @@ const BASE_VALUES = {
   I: 1,
 };
 
-const generateRoman = (number: number, result: string = "") => {
+const generateRoman = (number: number, result = "") => {
   if (number === 0) {
     return result;
   }
@@ -25,7 +25,7 @@ const generateRoman = (number: number, result: string = "") => {
     BASE_VALUES
   ).find(([, value]) => {
     return value <= number;
-  })!;
+  }) as [string, number];
 
   return generateRoman(number - current_value, `${result}${current_key}`);
 };
