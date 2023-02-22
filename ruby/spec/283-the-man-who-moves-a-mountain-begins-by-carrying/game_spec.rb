@@ -36,6 +36,16 @@ RSpec.describe Game do
         expect(game.amount).to be 2000
       end
     end
+
+    it 'test game deliver points' do
+      game.deliver
+      expect(game.amount).to be 0
+    end
+
+    it 'test player points after deliver' do
+      game.deliver
+      expect(player.amount).to be 1000
+    end
   end
 
   it 'test random game play' do
