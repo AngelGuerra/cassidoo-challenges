@@ -1,5 +1,6 @@
 # Javascript
 typescript/node_modules
+typescript/coverage
 
 # PHP
 php/.phpunit.result.cache
