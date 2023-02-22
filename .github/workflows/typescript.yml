@@ -14,5 +14,6 @@ jobs:
         with:
           node-version: lts/hydrogen
           cache: npm
+          cache-dependency-path: typescript/package-lock.json
       - run: npm ci
       - run: npm run coverage
