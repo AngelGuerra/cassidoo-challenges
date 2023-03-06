@@ -7,15 +7,11 @@ export const repeatedGroups = (numbers: number[]): number[][] => {
 const reducer = (acc: number[][], current: number): number[][] => {
   const prev = acc.at(-1) as number[] | undefined;
 
-  if (prev === undefined) {
-    return [[current]];
+  if (prev === undefined || prev[0] !== current) {
+    return [...acc, [current]];
   }
 
-  if (prev[0] === current) {
-    acc.splice(-1, 1, [...prev, current]);
+  acc.splice(-1, 1, [...prev, current]);
 
-    return acc;
-  }
-
-  return [...acc, [current]];
+  return acc;
 };
