@@ -106,7 +106,12 @@ function getLight(max: number, min: number): number {
   return (max + min) / 2;
 }
 
-function getSaturation(delta: number, light: number, max: number, min: number) {
+function getSaturation(
+  delta: number,
+  light: number,
+  max: number,
+  min: number
+): number {
   if (delta === 0) return 0;
 
   return light > 0.5 ? delta / (2 - max - min) : delta / (max + min);
@@ -169,7 +174,7 @@ function validateHslElements(hsl: THslObject): never | void {
   if (hsl.l < 0 || hsl.l > 100) throwError("Invalid hsl color.");
 }
 
-function hueToRgb(p: number, q: number, t: number) {
+function hueToRgb(p: number, q: number, t: number): number {
   if (t < 0) t += 1;
   if (t > 1) t -= 1;
   if (t < 1 / 6) return p + (q - p) * 6 * t;
