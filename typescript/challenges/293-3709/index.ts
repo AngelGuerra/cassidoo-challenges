@@ -7,7 +7,7 @@ type TOperatorGroup = {
   operator: TOperator;
 };
 
-function getRandomBetweenOneAnd(n: number) {
+function getRandomBetweenOneAnd(n: number): number {
   return Math.floor(Math.random() * n + 1);
 }
 
