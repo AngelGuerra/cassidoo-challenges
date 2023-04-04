@@ -5,7 +5,7 @@ import { howManyCharactersDoYouHave } from ".";
 describe.concurrent("Check results", () => {
   it("must return the exact number of characters", async () => {
     expect(await howManyCharactersDoYouHave()).toBe(
-      "1 thousand 2 hundred thirty four"
+      "1 thousand 2 hundred thirty two"
     );
   });
 });

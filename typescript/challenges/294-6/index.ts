@@ -43,13 +43,11 @@ function generateWords(size: number, words: string[] = []): string {
 
   if (size < 20) {
     words.push(LESS_THAN_TWENTY[size]);
-
     return generateWords(0, words);
   }
 
   if (size < 100) {
     words.push(TENTHS_LESS_THAN_HUNDRED[Math.floor(size / 10)]);
-
     return generateWords(size % 10, words);
   }
 
