@@ -91,7 +91,8 @@ function rule9(arr: number[]): boolean {
 export function divisibleIntegers(n: number, arr: number[]): boolean {
   if (n < 1 || n > 9) throw new Error("Divisor must be between 1 and 9.");
 
-  if (arr.length === 0) throw new Error("You must specify at least one number.");
+  if (arr.length === 0)
+    throw new Error("You must specify at least one number.");
 
   // Any integer is divisible by 1.
   if (n === 1) return true;
