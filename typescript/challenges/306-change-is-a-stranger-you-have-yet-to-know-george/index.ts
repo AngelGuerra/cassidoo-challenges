@@ -12,7 +12,7 @@ function validateAtoZ(data: string[]): void | never {
   }
 }
 
-function allChars(start: number, end: number) {
+function allChars(start: number, end: number): string[] {
   return Array.from({ length: end - start - 1 }, (_, index) =>
     String.fromCharCode(start + index + 1)
   );
